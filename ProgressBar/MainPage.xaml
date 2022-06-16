@@ -16,7 +16,10 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
-
+            <Label Text="0" HorizontalOptions="Center"
+                   FontSize="72" 
+                   x:Name="TheLabel"/>
+            <Label Text="The count above should show more than one digit!"></Label>
         </VerticalStackLayout>
     </ScrollView>
  

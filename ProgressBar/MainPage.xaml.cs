@@ -19,6 +19,7 @@ public partial class MainPage : ContentPage
         _timer.Start();
     }
 
+    private int _count = 0;
     private void _timer_Tick(object sender, EventArgs e)
     {
         _currentValue += 0.05 * _direction;
@@ -26,10 +27,12 @@ public partial class MainPage : ContentPage
         if (_currentValue > 1.0) _currentValue = 0;
 
         TheProgresBar.Progress = _currentValue;
+        TheLabel.Text = $"{_count++}";
     }
 
     private void OnCounterClicked(object sender, EventArgs e)
     {
         _direction *= -1;
+        _count = 0;
     }
 }
